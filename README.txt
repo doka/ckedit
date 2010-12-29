@@ -35,7 +35,7 @@ as well as a copy of the `ckedit` install profile.
 
    or use its url on Drupal.org directly:
 
-        $ drush make "http://github.com/doka/ckedit.git\" [directory]
+        $ drush make http://github.com/doka/ckedit.git [directory]
 
 2. Choose the "CKEdit" install profile when installing Drupal
 

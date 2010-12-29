@@ -1,15 +1,14 @@
-; This file describes the core project requirements for BuildKit 7.x. Several
-; patches against Drupal core and their associated issue numbers have been
-; included here for reference.
+; This file describes the core project requirements for CKEdit 7.x.
 ;
-; Use this file to build a full distro including Drupal core (with patches) and
-; the BuildKit install profile using the following command:
+; Use this file to build a full distro including Drupal core and
+; the CKEdit install profile using the following command:
 ;
 ;     $ drush make distro.make [directory]
 
+; compatibility
+; -------------
 api = 2
 core = 7.x
-
 
 ; Drupal 
 ; ------

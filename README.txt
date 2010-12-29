@@ -4,7 +4,7 @@ CKEdit profile 1.x for Drupal 7
 ---------------------------------
 Install Drupal with WYSIWYG features pre-configured.
 
-CKEdit is a basic distribution wiht preconfigured WYSIWYG features
+CKEdit is a Drupal distribution with preconfigured WYSIWYG features
 based on CKEditor, wysiwyg and IMCE modules
 
 
@@ -35,7 +35,7 @@ as well as a copy of the `ckedit` install profile.
 
    or use its url on Drupal.org directly:
 
-        $ drush make "http://github.com/doka/ckedit.git" [directory]
+        $ drush make "http://github.com/doka/ckedit.git\" [directory]
 
 2. Choose the "CKEdit" install profile when installing Drupal
 

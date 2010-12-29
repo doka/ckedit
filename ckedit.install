@@ -434,9 +434,10 @@ function ckedit_install() {
 
   // Enable default permissions for system roles.
   $filtered_html_permission = filter_permission_name($filtered_html_format);
-  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
-  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'post comments without approval', $filtered_html_permission));
+  user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission)));
+  user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
 
+  
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
@@ -458,7 +459,7 @@ function ckedit_install() {
   user_role_save($ckedit_role);
   // add permissions to that new role
   $ckedit_format_permission = filter_permission_name($ckedit_format);
-  user_role_grant_permissions($ckedit_role->rid, array('access content', 'access comments', 'post comments', 'post comments without approval', $ckedit_format_permission) );
+  user_role_grant_permissions($ckedit_role->rid, array('access content', 'access comments', 'post comments', 'skip comment approval', $ckedit_format_permission));
 
   // Create a Home link in the main menu.
   $item = array(

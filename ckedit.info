@@ -1,0 +1,35 @@
+; $Id: 
+;
+name = CKEdit
+description = Install with WYSIWYG features pre-configured.
+;
+core = 7.x
+version = 7.0-1.0-dev
+;
+; Core minimal
+dependencies[] = block
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = image
+dependencies[] = menu
+dependencies[] = toolbar
+;
+; Core optional
+dependencies[] = comment
+dependencies[] = contact
+dependencies[] = dblog
+dependencies[] = help
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = search
+dependencies[] = shortcut
+dependencies[] = taxonomy
+;
+; Contrib modules
+dependencies[] = imce
+dependencies[] = wysiwyg
+dependencies[] = imce_wysiwyg
+;
+; optional ???
+files[] = ckedit.profile

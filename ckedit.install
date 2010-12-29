@@ -10,7 +10,7 @@ function ckedit_install() {
   // Add text formats.
   $filtered_html_format = array(
     'name' => 'Filtered HTML',
-    'machine_name' => 'filtered_html',
+    'format' => 'filtered_html',
     'weight' => 1,
     'filters' => array(
       // URL filter.
@@ -40,7 +40,7 @@ function ckedit_install() {
 
   $full_html_format = array(
     'name' => 'Full HTML',
-    'machine_name' => 'full_html',
+    'format' => 'full_html',
     'weight' => 2,
     'filters' => array(
       // URL filter.
@@ -65,7 +65,7 @@ function ckedit_install() {
 
   $ckedit_format = array(
     'name' => 'CKEditor',
-    'machine_name' => 'ckeditor',
+    'format' => 'ckeditor',
     // put to the top of the format list
     'weight' => 0,
     'filters' => array(

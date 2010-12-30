@@ -35,6 +35,8 @@ dependencies[] = imce_wysiwyg
 dependencies[] = ctools
 dependencies[] = strongarm
 dependencies[] = features
+dependencies[] = ckedit_features
+
 ;
 ; optional ???
 files[] = ckedit.profile

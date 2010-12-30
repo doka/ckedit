@@ -35,6 +35,6 @@ projects[wysiwyg][download][branch] = "master"
 ; IMCE Wysiwyg integration bridge
 ; http://drupal.org/project/imce_wysiwyg
 ; projects[imce_wysiwyg][version] = 1.x-dev
-projects[wysiwyg][download][type] = "git"
-projects[wysiwyg][download][url] = "git://github.com/doka/imce_wysiwyg.git"
-projects[wysiwyg][download][branch] = "master"
+projects[imce_wysiwyg][download][type] = "git"
+projects[imce_wysiwyg][download][url] = "git://github.com/doka/imce_wysiwyg.git"
+projects[imce_wysiwyg][download][branch] = "master"

@@ -1,0 +1,3 @@
+<?php
+
+include_once('ckedit_features.features.inc');

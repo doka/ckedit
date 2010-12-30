@@ -38,3 +38,19 @@ projects[wysiwyg][download][branch] = "master"
 projects[imce_wysiwyg][download][type] = "git"
 projects[imce_wysiwyg][download][url] = "git://github.com/doka/imce_wysiwyg.git"
 projects[imce_wysiwyg][download][branch] = "master"
+
+; ---------------------------------------------------------
+; Ctools
+; http://drupal.org/project/ctools
+projects[ctools][version] = 1.0-alpha1
+
+; ---------------------------------------------------------
+; Strongarm
+; http://drupal.org/project/strongarm
+projects[strongarm][version] = 2.0-beta2
+
+; ---------------------------------------------------------
+; Features
+; http://drupal.org/project/features
+projects[features][version] = 1.0-alpha3
+

@@ -26,10 +26,15 @@ dependencies[] = search
 dependencies[] = shortcut
 dependencies[] = taxonomy
 ;
-; Contrib modules
+; Contrib modules - wysiwyg
 dependencies[] = imce
 dependencies[] = wysiwyg
 dependencies[] = imce_wysiwyg
+;
+; Contrib modules - features
+dependencies[] = ctools
+dependencies[] = strongarm
+dependencies[] = features
 ;
 ; optional ???
 files[] = ckedit.profile

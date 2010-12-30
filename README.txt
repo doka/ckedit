@@ -40,6 +40,26 @@ as well as a copy of the `ckedit` install profile.
 2. Choose the "CKEdit" install profile when installing Drupal
 
 
+Functionality
+-------------
+CKEdit distro extends the standard profile of Drupal 7:
+1. via distro.make and drupal-org.make files:
+- wysiwyg, icme and icme_wysiwyg modules (/profiles/ckedit/modules/)
+- CKEditor library (/sites/all/libraries/ckeditor)
+
+2. via ckedit.install (where feature is not yet working)
+- adds a new text format (/admin/config/content/formats) called CKEditor
+- creates a new role and permissions for wysiwyg features (/admin/people/permissions)
+- configures the CKEditor buttons and other feature (/config/content/wysiwyg)
+  (in wysiwyg table in the database)
+- clean up some default variables, see: http://drupal.org/node/840080#comment-3145536
+
+3. via features (where feature can be used, and resulting in ckedit-features.module)
+- configures the IMCE file browser (/admin/config/media/imce):
+    - add an IMCE configuration profile (ckedit)
+	- assign this profile to ckedit role
+
+
 Extending CKEdit
 ----------------
 

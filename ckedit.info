@@ -4,7 +4,7 @@ name = CKEdit
 description = Install with WYSIWYG features pre-configured.
 ;
 core = 7.x
-version = 7.0-1.0-dev
+version = 7.x-0.1-dev
 ;
 ; Core minimal
 dependencies[] = block

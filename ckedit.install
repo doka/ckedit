@@ -484,14 +484,37 @@ function ckedit_install() {
   variable_set('node_admin_theme', '1');
 
   // ckedit: configures the CKEditor buttons and other feature  
-  db_update('wysiwyg')
-    ->fields(
-	    array(
-		  'format'   => 'ckeditor',
-		  'editor'   => 'ckeditor',
-		  'settings' => 'a:21:{s:7:"default";i:1;s:11:"user_choose";i:0;s:11:"show_toggle";i:0;s:5:"theme";s:8:"advanced";s:8:"language";s:2:"en";s:15:"wysiwyg_buttons";a:3:{s:7:"default";a:48:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:9:"Underline";i:1;s:6:"Strike";i:1;s:11:"JustifyLeft";i:1;s:13:"JustifyCenter";i:1;s:12:"JustifyRight";i:1;s:12:"JustifyBlock";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:7:"Outdent";i:0;s:6:"Indent";i:0;s:4:"Undo";i:0;s:4:"Redo";i:0;s:4:"Link";i:1;s:6:"Unlink";i:0;s:6:"Anchor";i:0;s:5:"Image";i:1;s:9:"TextColor";i:0;s:7:"BGColor";i:0;s:11:"Superscript";i:1;s:9:"Subscript";i:1;s:10:"Blockquote";i:0;s:6:"Source";i:0;s:14:"HorizontalRule";i:0;s:3:"Cut";i:0;s:4:"Copy";i:0;s:5:"Paste";i:0;s:9:"PasteText";i:0;s:13:"PasteFromWord";i:0;s:10:"ShowBlocks";i:0;s:12:"RemoveFormat";i:0;s:11:"SpecialChar";i:0;s:6:"Format";i:0;s:4:"Font";i:0;s:8:"FontSize";i:1;s:6:"Styles";i:0;s:5:"Table";i:0;s:9:"SelectAll";i:0;s:4:"Find";i:0;s:7:"Replace";i:0;s:5:"Flash";i:0;s:6:"Smiley";i:0;s:9:"CreateDiv";i:0;s:8:"Maximize";i:0;s:12:"SpellChecker";i:0;s:5:"Scayt";i:0;s:5:"About";i:0;}s:4:"imce";a:1:{s:4:"imce";i:1;}s:6:"drupal";a:1:{s:5:"break";i:0;}}s:11:"toolbar_loc";s:3:"top";s:13:"toolbar_align";s:4:"left";s:8:"path_loc";s:6:"bottom";s:8:"resizing";i:1;s:11:"verify_html";i:1;s:12:"preformatted";i:0;s:22:"convert_fonts_to_spans";i:1;s:17:"remove_linebreaks";i:1;s:23:"apply_source_formatting";i:0;s:27:"paste_auto_cleanup_on_paste";i:0;s:13:"block_formats";s:32:"p,address,pre,h2,h3,h4,h5,h6,div";s:11:"css_setting";s:5:"theme";s:8:"css_path";s:0:"";s:11:"css_classes";s:0:"";s:7:"buttons";a:2:{s:7:"default";a:15:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:9:"Underline";i:1;s:6:"Strike";i:1;s:11:"JustifyLeft";i:1;s:13:"JustifyCenter";i:1;s:12:"JustifyRight";i:1;s:12:"JustifyBlock";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:4:"Link";i:1;s:5:"Image";i:1;s:11:"Superscript";i:1;s:9:"Subscript";i:1;s:8:"FontSize";i:1;}s:4:"imce";a:1:{s:4:"imce";i:1;}}}',
-		) )
-    ->condition('wysiwyg.format', 'ckeditor')
-    ->execute();
+	db_insert('wysiwyg')
+	  ->fields(array(
+		'format' => 'ckeditor',
+		'editor' => 'ckeditor',
+		'settings' => 'a:21:{s:7:"default";i:1;s:11:"user_choose";i:0;s:11:"show_toggle";i:0;s:5:"theme";s:8:"advanced";s:8:"language";s:2:"en";s:15:"wysiwyg_buttons";a:3:{s:7:"default";a:48:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:9:"Underline";i:1;s:6:"Strike";i:1;s:11:"JustifyLeft";i:1;s:13:"JustifyCenter";i:1;s:12:"JustifyRight";i:1;s:12:"JustifyBlock";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:7:"Outdent";i:0;s:6:"Indent";i:0;s:4:"Undo";i:0;s:4:"Redo";i:0;s:4:"Link";i:1;s:6:"Unlink";i:0;s:6:"Anchor";i:0;s:5:"Image";i:1;s:9:"TextColor";i:0;s:7:"BGColor";i:0;s:11:"Superscript";i:1;s:9:"Subscript";i:1;s:10:"Blockquote";i:0;s:6:"Source";i:0;s:14:"HorizontalRule";i:0;s:3:"Cut";i:0;s:4:"Copy";i:0;s:5:"Paste";i:0;s:9:"PasteText";i:0;s:13:"PasteFromWord";i:0;s:10:"ShowBlocks";i:0;s:12:"RemoveFormat";i:0;s:11:"SpecialChar";i:0;s:6:"Format";i:0;s:4:"Font";i:0;s:8:"FontSize";i:1;s:6:"Styles";i:0;s:5:"Table";i:0;s:9:"SelectAll";i:0;s:4:"Find";i:0;s:7:"Replace";i:0;s:5:"Flash";i:0;s:6:"Smiley";i:0;s:9:"CreateDiv";i:0;s:8:"Maximize";i:0;s:12:"SpellChecker";i:0;s:5:"Scayt";i:0;s:5:"About";i:0;}s:4:"imce";a:1:{s:4:"imce";i:1;}s:6:"drupal";a:1:{s:5:"break";i:0;}}s:11:"toolbar_loc";s:3:"top";s:13:"toolbar_align";s:4:"left";s:8:"path_loc";s:6:"bottom";s:8:"resizing";i:1;s:11:"verify_html";i:1;s:12:"preformatted";i:0;s:22:"convert_fonts_to_spans";i:1;s:17:"remove_linebreaks";i:1;s:23:"apply_source_formatting";i:0;s:27:"paste_auto_cleanup_on_paste";i:0;s:13:"block_formats";s:32:"p,address,pre,h2,h3,h4,h5,h6,div";s:11:"css_setting";s:5:"theme";s:8:"css_path";s:0:"";s:11:"css_classes";s:0:"";s:7:"buttons";a:2:{s:7:"default";a:15:{s:4:"Bold";i:1;s:6:"Italic";i:1;s:9:"Underline";i:1;s:6:"Strike";i:1;s:11:"JustifyLeft";i:1;s:13:"JustifyCenter";i:1;s:12:"JustifyRight";i:1;s:12:"JustifyBlock";i:1;s:12:"BulletedList";i:1;s:12:"NumberedList";i:1;s:4:"Link";i:1;s:5:"Image";i:1;s:11:"Superscript";i:1;s:9:"Subscript";i:1;s:8:"FontSize";i:1;}s:4:"imce";a:1:{s:4:"imce";i:1;}}}',
+	  ))
+	->execute();
+	db_insert('wysiwyg')
+	  ->fields(array(
+		'format' => 'filtered_html',
+		'editor' => '',
+		'settings' => NULL,
+	  ))
+	->execute();
+	db_insert('wysiwyg')
+	  ->fields(array(
+		'format' => 'full_html',
+		'editor' => '',
+		'settings' => NULL,
+	  ))
+	->execute();
+	db_insert('wysiwyg')
+	  ->fields(array(
+		'format' => 'plain_text_html',
+		'editor' => '',
+		'settings' => NULL,
+	  ))
+	->execute();
 	
+  // ckedit: delete variables having default values
+  // see also: http://drupal.org/node/840080#comment-3145536 
+  variable_del('imce_profiles');
+  variable_del('site_name');
 }

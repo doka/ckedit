@@ -12,7 +12,7 @@ core = 7.x
 
 ; Drupal 
 ; ------
-projects[drupal][version] = 7.0-rc3
+projects[drupal][version] = 7.0-rc4
 
 ; External libraries
 ; ------------------

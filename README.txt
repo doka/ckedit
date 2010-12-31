@@ -71,6 +71,7 @@ CKEdit distro extends the standard profile of Drupal 7:
    - configures the CKEditor buttons and other feature (/config/content/wysiwyg)
      (in wysiwyg table in the database)
    - clean up some default variables, see: http://drupal.org/node/840080#comment-3145536
+   - see standard_rc4-ckedit-profile.path file for differences to standard.install file of RC4
 
 5. via features (where feature can be used, and resulting in ckedit-features.module)
    - configures the IMCE file browser (/admin/config/media/imce):

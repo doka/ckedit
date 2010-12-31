@@ -33,18 +33,21 @@ There are two options to use CKEdit:
    with ckedit install profile, and having all necessary modules and 3rd party libraries
    installed and configured. CKEdit provides a `distro.make` file for building this
    distribution by drush:
+   
       $ drush make https://github.com/doka/ckedit/raw/master/distro.make [directory]
 
+	  
 2. Install the "CKEdit" install profile into the profiles/ directory of a Drupal install.
    In that case you also have to manually install the 3rd party libraries of ckeditor, 
    then build the CKEdit profile by profile.make file:
+   
       $ cd [Drupal root]/sites/all
-	  $ mkdir libraries
-	  $ cd libraries
-	  $ wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5/ckeditor_3.5.tar.gz
-	  $ tar xfv ckeditor_3.5.tar.gz
+      $ mkdir libraries
+      $ cd libraries
+      $ wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5/ckeditor_3.5.tar.gz
+      $ tar xfv ckeditor_3.5.tar.gz
       $ cd [Drupal root]
-	  $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make profiles/ckedit
+      $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make profiles/ckedit
 	  
 In both cases you will have to install a new Drupal site as usual, but choose the CKEdit profile.
 
@@ -61,7 +64,8 @@ CKEdit distro extends the standard profile of Drupal 7:
 3. the drupal-org.make downloads wysiwyg, icme and icme_wysiwyg modules
    (/profiles/ckedit/modules/) as well as the features, strongarm and ctools modules
 
-4. the ckedit.install covers topics where feature is not yet working
+4. the ckedit.install covers topics where feature is not yet working.
+   - it is an extension of standard.profile of Drupal.
    - adds a new text format (/admin/config/content/formats) called CKEditor
    - creates a new role and permissions for wysiwyg features (/admin/people/permissions)
    - configures the CKEditor buttons and other feature (/config/content/wysiwyg)

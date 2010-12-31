@@ -1,5 +1,5 @@
 <?php
-// $Id: 
+// $Id:
 
 /**
  * Implements hook_install().
@@ -9,8 +9,8 @@
 function ckedit_install() {
   // Add text formats.
   $filtered_html_format = array(
-    'name' => 'Filtered HTML',
     'format' => 'filtered_html',
+    'name' => 'Filtered HTML',
     'weight' => 1,
     'filters' => array(
       // URL filter.
@@ -39,8 +39,8 @@ function ckedit_install() {
   filter_format_save($filtered_html_format);
 
   $full_html_format = array(
-    'name' => 'Full HTML',
     'format' => 'full_html',
+    'name' => 'Full HTML',
     'weight' => 2,
     'filters' => array(
       // URL filter.
@@ -65,8 +65,8 @@ function ckedit_install() {
 
   // ckedit: add a new text format
   $ckedit_format = array(
-    'name' => 'CKEditor',
     'format' => 'ckeditor',
+    'name' => 'CKEditor',
     // put to the top of the format list
     'weight' => 0,
     'filters' => array(
@@ -94,7 +94,6 @@ function ckedit_install() {
   );
   $ckedit_format = (object) $ckedit_format;
   filter_format_save($ckedit_format);
-
 
   // Enable some standard blocks.
   $default_theme = variable_get('theme_default', 'bartik');
@@ -146,16 +145,6 @@ function ckedit_install() {
       'theme' => $default_theme,
       'status' => 1,
       'weight' => 0,
-      'region' => 'sidebar_first',
-      'pages' => '',
-      'cache' => -1,
-    ),
-    array(
-      'module' => 'system',
-      'delta' => 'management',
-      'theme' => $default_theme,
-      'status' => 1,
-      'weight' => 1,
       'region' => 'sidebar_first',
       'pages' => '',
       'cache' => -1,
@@ -280,7 +269,6 @@ function ckedit_install() {
       'type' => 'node',
       'bundle' => 'article',
       'mapping' => array(
-        'rdftype' => array('sioc:Item', 'foaf:Document'),
         'field_image' => array(
           'predicates' => array('og:image', 'rdfs:seeAlso'),
           'type' => 'rel',
@@ -348,7 +336,7 @@ function ckedit_install() {
     'description' => $vocabulary->help,
     'widget' => array(
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => -4,
     ),
     'display' => array(
       'default' => array(
@@ -438,7 +426,6 @@ function ckedit_install() {
   user_role_grant_permissions(DRUPAL_ANONYMOUS_RID, array('access content', 'access comments', $filtered_html_permission));
   user_role_grant_permissions(DRUPAL_AUTHENTICATED_RID, array('access content', 'access comments', 'post comments', 'skip comment approval', $filtered_html_permission));
 
-  
   // Create a default role for site administrators, with all available permissions assigned.
   $admin_role = new stdClass();
   $admin_role->name = 'administrator';
@@ -448,11 +435,6 @@ function ckedit_install() {
   // Set this as the administrator role.
   variable_set('user_admin_role', $admin_role->rid);
 
-  // Assign user 1 the "administrator" role.
-  db_insert('users_roles')
-    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
-    ->execute();
-
   // ckedit: Create new role and permission for ckedit features
   $ckedit_role = new stdClass();
   $ckedit_role->name = 'ckedit';
@@ -461,6 +443,11 @@ function ckedit_install() {
   // add permissions to that new role
   $ckedit_format_permission = filter_permission_name($ckedit_format);
   user_role_grant_permissions($ckedit_role->rid, array('access content', 'access comments', 'post comments', 'skip comment approval', $ckedit_format_permission));
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
 
   // Create a Home link in the main menu.
   $item = array(
@@ -479,11 +466,10 @@ function ckedit_install() {
     ->condition('type', 'theme')
     ->condition('name', 'seven')
     ->execute();
-
   variable_set('admin_theme', 'seven');
   variable_set('node_admin_theme', '1');
-
-  // ckedit: configures the CKEditor buttons and other feature  
+  
+  // ckedit: db inserts in order to configure the CKEditor buttons and other features
 	db_insert('wysiwyg')
 	  ->fields(array(
 		'format' => 'ckeditor',

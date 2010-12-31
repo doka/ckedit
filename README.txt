@@ -47,7 +47,7 @@ There are two options to use CKEdit:
       $ wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5/ckeditor_3.5.tar.gz
       $ tar xfv ckeditor_3.5.tar.gz
       $ cd [Drupal root]
-      $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make profiles/ckedit
+      $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make .
 	  
 In both cases you will have to install a new Drupal site as usual, but choose the CKEdit profile.
 

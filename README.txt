@@ -29,8 +29,8 @@ Getting started
 ---------------
 There are two options to use CKEdit:
 
-1. Install a full Drupal distribution: you can have a complett Drupal installation
-   with ckedit install profile, and having all necessary modules and 3rd party libraries
+1. Install a full Drupal distribution: you can have a complet Drupal installation
+   with ckedit install profile, and all necessary modules and 3rd party libraries
    installed and configured. CKEdit provides a `distro.make` file for building this
    distribution by drush:
    
@@ -49,7 +49,8 @@ There are two options to use CKEdit:
       $ cd [Drupal root]
       $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make .
 	  
-In both cases you will have to install a new Drupal site as usual, but choose the CKEdit profile.
+After you can install new Drupal sites as usual, and choose the CKEdit profile for these
+features.
 
 
 Functionality
@@ -71,9 +72,9 @@ CKEdit distro extends the standard profile of Drupal 7:
    - configures the CKEditor buttons and other feature (/config/content/wysiwyg)
      (in wysiwyg table in the database)
    - clean up some default variables, see: http://drupal.org/node/840080#comment-3145536
-   - see standard_rc4-ckedit-profile.path file for differences to standard.install file of RC4
+   - see standard-ckedit-profile.path file for differences to standard.install file of Drupal 7
 
-5. via features (where feature can be used, and resulting in ckedit-features.module)
+5. via features (where feature can be used, resulting in ckedit-features.module)
    - configures the IMCE file browser (/admin/config/media/imce):
    - add an IMCE configuration profile (ckedit)
    - assign this profile to ckedit role

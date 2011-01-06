@@ -451,7 +451,7 @@ function ckedit_install() {
 
   // Create a Home link in the main menu.
   $item = array(
-    'link_title' => 'Home',
+    'link_title' => st('Home'),
     'link_path' => '<front>',
     'menu_name' => 'main-menu',
   );

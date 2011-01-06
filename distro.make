@@ -14,7 +14,7 @@ core = 7.x
 
 ; Drupal 7 core
 ; -------------
-projects[drupal][version] = 7.0-rc4
+projects[drupal][version] = 7.0
 
 ; External libraries from ckeditor.com
 ; ------------------------------------

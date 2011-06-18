@@ -5,28 +5,29 @@
 ;   - the 3rd party files from ckeditor.com
 ;   - the CKEdit install profile (via drupal-org.make file)
 ; using the following command:
-;     $ drush make distro.make [directory]
+;     $ drush make https://raw.github.com/doka/ckedit/master/distro.make [directory]
 
-; compatibility
-; -------------
+; interfaces
+; ----------
 api = 2
 core = 7.x
 
-; Drupal 7 core
-; -------------
-projects[drupal][version] = 7.2
+; Drupal core =================================================================
+projects[drupal][type] = core
+projects[drupal][version] = "7.2"
 
-; External libraries from ckeditor.com
-; ------------------------------------
-; CKEditor library, goes into into /sites/all/libraries
+; External libraries ==========================================================
+; from ckeditor.com, goes into into /sites/all/libraries
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.1/ckeditor_3.6.1.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
 
-; ckedit profile via drupal-org.make
-; ----------------------------------
+; Includes ====================================================================
+; includes[] = https://github.com/Wiredcraft/buildkit/raw/7.x-2.x/tools.make
+
+; Profile =====================================================================
 projects[ckedit][type] = profile
 projects[ckedit][download][type] = git
 projects[ckedit][download][url] = "git://github.com/doka/ckedit.git"
-projects[ckedit][download][branch] = "master"
+; projects[ckedit][download][tag] = 7.x-1.0-dev

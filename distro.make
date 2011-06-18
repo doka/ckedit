@@ -14,13 +14,13 @@ core = 7.x
 
 ; Drupal 7 core
 ; -------------
-projects[drupal][version] = 7.0
+projects[drupal][version] = 7.2
 
 ; External libraries from ckeditor.com
 ; ------------------------------------
 ; CKEditor library, goes into into /sites/all/libraries
 libraries[ckeditor][download][type] = "get"
-libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5/ckeditor_3.5.tar.gz"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.1/ckeditor_3.6.1.tar.gz"
 libraries[ckeditor][directory_name] = "ckeditor"
 libraries[ckeditor][destination] = "libraries"
 

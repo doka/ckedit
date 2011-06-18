@@ -44,8 +44,8 @@ There are two options to use CKEdit:
       $ cd [Drupal root]/sites/all
       $ mkdir libraries
       $ cd libraries
-      $ wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.5/ckeditor_3.5.tar.gz
-      $ tar xfv ckeditor_3.5.tar.gz
+      $ wget http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.1/ckeditor_3.6.1.tar.gz
+      $ tar xfv ckeditor_3.6.1.tar.gz
       $ cd [Drupal root]
       $ drush make --no-core https://github.com/doka/ckedit/raw/master/profile.make .
 	  

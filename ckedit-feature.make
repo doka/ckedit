@@ -12,10 +12,16 @@
 api = 2
 core = 7.x
 
+; External libraries from ckeditor.com
+; ------------------------------------
+; CKEditor library, goes into into /sites/all/libraries
+libraries[ckeditor][download][type] = "get"
+libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.1/ckeditor_3.6.1.tar.gz"
+libraries[ckeditor][directory_name] = "ckeditor"
+libraries[ckeditor][destination] = "libraries"
 
 ; Modules
 ; -------
-
 ; ---------------------------------------------------------
 ; IMCE - file uploader and browser
 ; http://drupal.org/project/imce
@@ -31,10 +37,6 @@ projects[wysiwyg][version] = 2.0
 ; http://drupal.org/project/imce_wysiwyg
 projects[imce_wysiwyg][version] = 1.x-dev
 
-;projects[imce_wysiwyg][download][type] = "git"
-;projects[imce_wysiwyg][download][url] = "git://github.com/doka/imce_wysiwyg.git"
-;projects[imce_wysiwyg][download][branch] = "master"
-
 ; ---------------------------------------------------------
 ; Ctools
 ; http://drupal.org/project/ctools
@@ -49,4 +51,14 @@ projects[strongarm][version] = 2.0-beta2
 ; Features
 ; http://drupal.org/project/features
 projects[features][version] = 1.0-beta2
+
+
+; ---------------------------------------------------------
+; CKedit features module
+projects[ckedit][type] = module
+projects[ckedit][download][type] = get
+projects[ckedit][download][url] = "https://github.com/doka/ckedit/tree/master/modules"
+;projects[ckedit][version] = 1.0-beta2
+
+
 

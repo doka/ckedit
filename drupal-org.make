@@ -1,11 +1,5 @@
 ; $Id: 
 ; 
-; make file for ckedit profile
-; 
-; use it to download the ckedit profile into a drupal
-;
-; tbd: howto use
-;
 
 ; interfaces
 ; ----------
@@ -30,10 +24,6 @@ projects[wysiwyg][version] = 2.0
 ; IMCE Wysiwyg integration bridge
 ; http://drupal.org/project/imce_wysiwyg
 projects[imce_wysiwyg][version] = 1.x-dev
-
-;projects[imce_wysiwyg][download][type] = "git"
-;projects[imce_wysiwyg][download][url] = "git://github.com/doka/imce_wysiwyg.git"
-;projects[imce_wysiwyg][download][branch] = "master"
 
 ; ---------------------------------------------------------
 ; Ctools

@@ -19,8 +19,6 @@ projects[imce][version] = 1.4
 ; wysiwyg - abstaction layer for client side editors
 ; http://drupal.org/project/wysiwyg
 projects[wysiwyg][version] = 2.0
-;[PATCH] Issue #1143104 by EugenMayer: Fixed CKEditor 3.5.4 version detection.
-projects[wysiwyg][patch][] = "http://drupalcode.org/project/wysiwyg.git/patch/26b4887"
 
 ; ---------------------------------------------------------
 ; IMCE Wysiwyg integration bridge

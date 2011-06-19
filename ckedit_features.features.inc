@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * ckedit_features.features.inc
+ */
 
 /**
  * Implementation of hook_ctools_plugin_api().

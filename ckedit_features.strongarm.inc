@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * ckedit_features.strongarm.inc
+ */
 
 /**
  * Implementation of hook_strongarm().

@@ -24,3 +24,24 @@ projects[wysiwyg][version] = 2.2
 ; IMCE Wysiwyg integration bridge
 ; http://drupal.org/project/imce_wysiwyg
 projects[imce_wysiwyg][version] = 1.0
+
+; ---------------------------------------------------------
+; ctools
+; http://drupal.org/project/ctools
+projects[ctools][version] = "1.3"
+
+; ---------------------------------------------------------
+; views
+; http://drupal.org/project/views
+projects[views][version] = "3.6"
+
+; ---------------------------------------------------------
+; advanced_help
+; http://drupal.org/project/advanced_help
+projects[advanced_help][version] = "1.0"
+
+; ---------------------------------------------------------
+; google_analytics
+; http://drupal.org/project/google_analytics
+projects[google_analytics][version] = "1.3"
+

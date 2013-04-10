@@ -52,8 +52,8 @@ projects[google_analytics][version] = "1.3"
 
 ; Danland
 ; http://drupal.org/project/danland
-projects[nitobe][type] = "theme"
-projects[nitobe][version] = "1.0"
+projects[danland][type] = "theme"
+projects[danland][version] = "1.0"
 
 ; Nitobe
 ; http://drupal.org/project/nitobe

@@ -45,3 +45,18 @@ projects[advanced_help][version] = "1.0"
 ; http://drupal.org/project/google_analytics
 projects[google_analytics][version] = "1.3"
 
+
+
+; Themes
+; -------
+
+; Danland
+; http://drupal.org/project/danland
+projects[nitobe][type] = "theme"
+projects[nitobe][version] = "1.0"
+
+; Nitobe
+; http://drupal.org/project/nitobe
+projects[nitobe][type] = "theme"
+projects[nitobe][version] = "2.0-beta1"
+

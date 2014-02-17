@@ -13,30 +13,50 @@ core = 7.x
 ; ---------------------------------------------------------
 ; IMCE - file uploader and browser
 ; http://drupal.org/project/imce
-projects[imce][version] = 1.4
+projects[imce][version] = 1.7
 
 ; ---------------------------------------------------------
 ; wysiwyg - abstaction layer for client side editors
 ; http://drupal.org/project/wysiwyg
-projects[wysiwyg][version] = 2.0
+projects[wysiwyg][version] = 2.2
 
 ; ---------------------------------------------------------
 ; IMCE Wysiwyg integration bridge
 ; http://drupal.org/project/imce_wysiwyg
-projects[imce_wysiwyg][version] = 1.x-dev
+projects[imce_wysiwyg][version] = 1.0
 
 ; ---------------------------------------------------------
-; Ctools
+; ctools
 ; http://drupal.org/project/ctools
-projects[ctools][version] = 1.0-beta1
+projects[ctools][version] = "1.3"
 
 ; ---------------------------------------------------------
-; Strongarm
-; http://drupal.org/project/strongarm
-projects[strongarm][version] = 2.0-beta2
+; views
+; http://drupal.org/project/views
+projects[views][version] = "3.6"
 
 ; ---------------------------------------------------------
-; Features
-; http://drupal.org/project/features
-projects[features][version] = 1.0-beta2
+; advanced_help
+; http://drupal.org/project/advanced_help
+projects[advanced_help][version] = "1.0"
+
+; ---------------------------------------------------------
+; google_analytics
+; http://drupal.org/project/google_analytics
+projects[google_analytics][version] = "1.3"
+
+
+
+; Themes
+; -------
+
+; Danland
+; http://drupal.org/project/danland
+projects[danland][type] = "theme"
+projects[danland][version] = "1.0"
+
+; Nitobe
+; http://drupal.org/project/nitobe
+projects[nitobe][type] = "theme"
+projects[nitobe][version] = "2.0-beta1"
 

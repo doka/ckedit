@@ -60,7 +60,12 @@ projects[danland][version] = "1.0"
 projects[nitobe][type] = "theme"
 projects[nitobe][version] = "2.0-beta1"
 
-; Nitobe
+; Professional theme
 ; https://www.drupal.org/project/professional_theme
 projects[professional_theme][type] = "theme"
 projects[professional_theme][version] = "2.04"
+
+; Business
+; https://www.drupal.org/project/business
+projects[business][type] = "theme"
+projects[business][version] = "1.11"

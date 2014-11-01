@@ -1,5 +1,5 @@
-; $Id: 
-; 
+; $Id:
+;
 
 ; interfaces
 ; ----------
@@ -13,7 +13,7 @@ core = 7.x
 ; ---------------------------------------------------------
 ; IMCE - file uploader and browser
 ; http://drupal.org/project/imce
-projects[imce][version] = 1.7
+projects[imce][version] = 1.9
 
 ; ---------------------------------------------------------
 ; wysiwyg - abstaction layer for client side editors
@@ -60,3 +60,7 @@ projects[danland][version] = "1.0"
 projects[nitobe][type] = "theme"
 projects[nitobe][version] = "2.0-beta1"
 
+; Nitobe
+; https://www.drupal.org/project/professional_theme
+projects[professional_theme][type] = "theme"
+projects[professional_theme][version] = "2.04"

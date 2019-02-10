@@ -28,7 +28,7 @@ projects[imce_wysiwyg][version] = 1.0
 ; ---------------------------------------------------------
 ; ctools
 ; https://drupal.org/project/ctools
-projects[ctools][version] = "1.14"
+projects[ctools][version] = "1.15"
 
 ; ---------------------------------------------------------
 ; views
@@ -38,12 +38,12 @@ projects[views][version] = "3.20"
 ; ---------------------------------------------------------
 ; advanced_help
 ; https://drupal.org/project/advanced_help
-projects[advanced_help][version] = "1.4"
+projects[advanced_help][version] = "1.5"
 
 ; ---------------------------------------------------------
 ; google_analytics
 ; https://drupal.org/project/google_analytics
-projects[google_analytics][version] = "2.4"
+projects[google_analytics][version] = "2.6"
 
 
 
